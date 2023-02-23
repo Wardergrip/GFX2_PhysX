@@ -82,6 +82,8 @@
     <ClInclude Include="BaseCamera.h" />
     <ClInclude Include="BinaryReader.h" />
     <ClInclude Include="BouncingBallsScene.h" />
+    <ClInclude Include="BoxForceScene.h" />
+    <ClInclude Include="BoxTorqueScene.h" />
     <ClInclude Include="ContentLoader.h" />
     <ClInclude Include="ContentManager.h" />
     <ClInclude Include="Core.h" />
@@ -94,6 +96,7 @@
     <ClInclude Include="DebugRenderer.h" />
     <ClInclude Include="EffectLoader.h" />
     <ClInclude Include="FreeCamera.h" />
+    <ClInclude Include="FrictionTestScene.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="GameSettings.h" />
@@ -129,6 +132,8 @@
     <ClCompile Include="BaseCamera.cpp" />
     <ClCompile Include="BinaryReader.cpp" />
     <ClCompile Include="BouncingBallsScene.cpp" />
+    <ClCompile Include="BoxForceScene.cpp" />
+    <ClCompile Include="BoxTorqueScene.cpp" />
     <ClCompile Include="ContentManager.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="CubePosColorNorm.cpp" />
@@ -139,6 +144,7 @@
     <ClCompile Include="DebugRenderer.cpp" />
     <ClCompile Include="EffectLoader.cpp" />
     <ClCompile Include="FreeCamera.cpp" />
+    <ClCompile Include="FrictionTestScene.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="GameTime.cpp" />
