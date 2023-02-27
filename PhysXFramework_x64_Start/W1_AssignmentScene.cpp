@@ -10,6 +10,7 @@
 void W1_AssignmentScene::Initialize()
 {
 	EnablePhysxDebugRendering(true);
+	m_pPhysxScene->setVisualizationParameter(physx::PxVisualizationParameter::Enum::eBODY_LIN_VELOCITY, 1.f);
 
 	const auto pPhysX = PhysxManager::GetInstance()->GetPhysics();
 	const PxMaterial* pDefaultMaterial = pPhysX->createMaterial(.5f, .5f, .05f);
