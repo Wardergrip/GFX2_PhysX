@@ -37,6 +37,7 @@ private:
 	bool m_RedTriggered;
 
 	FMOD::Channel* m_pChannel2D{ nullptr };
+	FMOD::Sound* m_pSound2D{ nullptr };
 	
 };
 

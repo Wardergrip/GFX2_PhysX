@@ -161,11 +161,10 @@ void W2_AssignmentScene::Initialize()
 	{
 		const auto pFmod = SoundManager::GetInstance()->GetSystem();
 		//SOUND 2D
-		FMOD::Sound* pSound2D{ nullptr };
-		FMOD_RESULT result = pFmod->createSound("Resources/Sounds/bell.mp3", FMOD_2D | FMOD_LOOP_OFF, nullptr, &pSound2D);
+		FMOD_RESULT result = pFmod->createSound("Resources/Sounds/bell.mp3", FMOD_2D | FMOD_LOOP_OFF, nullptr, &m_pSound2D);
 		SoundManager::GetInstance()->ErrorCheck(result);
 
-		result = pFmod->playSound(pSound2D, nullptr, true, &m_pChannel2D);
+		result = pFmod->playSound(m_pSound2D, nullptr, true, &m_pChannel2D);
 		SoundManager::GetInstance()->ErrorCheck(result);
 	}
 
@@ -214,7 +213,7 @@ void W2_AssignmentScene::Update()
 		m_pBlueHatch->Translate(-7.5f, 16.f, 0.f);
 		m_BlueTriggered = false;
 
-		m_pChannel2D->setPaused(false);
+		SoundManager::GetInstance()->GetSystem()->playSound(m_pSound2D, nullptr, false, &m_pChannel2D);
 	}
 	if (m_RedTriggered)
 	{
@@ -222,7 +221,9 @@ void W2_AssignmentScene::Update()
 		m_pRedHatch->Translate(7.25f, 16.f, 0.f);
 		m_RedTriggered = false;
 
-		m_pChannel2D->setPaused(false);
+		//m_pChannel2D->setPaused(false);
+
+		SoundManager::GetInstance()->GetSystem()->playSound(m_pSound2D, nullptr, false, &m_pChannel2D);
 	}
 }
 
