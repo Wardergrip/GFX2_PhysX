@@ -6,7 +6,7 @@
 // W01 - W02  (#define ...)
 
 #define W01
-//#define W02
+#define W02
 
 #ifdef W01
 #include "TestScene.h"
