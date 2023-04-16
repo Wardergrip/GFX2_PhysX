@@ -26,4 +26,6 @@ private:
 	GameObject* m_pBall;
 	const XMFLOAT3 m_CubeDimensions{ 1.f,1.f,1.f };
 	const float m_Radius{ 1.f };
+
+	bool m_IsInitialised{ false };
 };

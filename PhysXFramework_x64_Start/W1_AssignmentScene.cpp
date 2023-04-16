@@ -53,6 +53,8 @@ void W1_AssignmentScene::Initialize()
 	m_pBall->AttachRigidActor(pSphereActor);
 	
 	Reset();
+
+	m_IsInitialised = true;
 }
 
 void W1_AssignmentScene::Update()
@@ -119,4 +121,9 @@ void W1_AssignmentScene::Reset()
 		m_pCubes[i]->RotateDegrees(0, (rand() % 11) - 5, 0);
 	}
 	m_pBall->Translate(0, m_Radius, 0);
+	if (m_IsInitialised)
+	{
+		auto pSphereRB = static_cast<PxRigidBody*>(m_pBall->GetRigidActor());
+		pSphereRB->setForceAndTorque({ 0,0,0 }, { 0,0,0 });
+	}
 }
